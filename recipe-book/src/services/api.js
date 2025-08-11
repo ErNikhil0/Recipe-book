@@ -28,7 +28,7 @@ const mockRecipes = [
     readyInMinutes: 25,
     servings: 2
   },
-  // Add more mock recipes as needed
+  
 ];
 
 const mockRecipeDetails = {
@@ -52,8 +52,8 @@ const mockRecipeDetails = {
 let cachedCategories = null;
 
 const getMockRating = () => ({
-  rating: (Math.random() * 2 + 3).toFixed(1), // Random between 3-5
-  ratingCount: Math.floor(Math.random() * 100) + 5 // Random 5-105
+  rating: (Math.random() * 2 + 3).toFixed(1), 
+  ratingCount: Math.floor(Math.random() * 100) + 5 
 });
 
 export const fetchRecipes = async (number = 12) => {
@@ -128,7 +128,7 @@ export const fetchCategories = async () => {
   if (cachedCategories) return cachedCategories;
   
   try {
-    // Spoonacular doesn't have a direct categories endpoint, so we'll use some common ones
+    
     const categories = [
       'main course',
       'dessert',
@@ -152,11 +152,11 @@ export const fetchCategories = async () => {
       'main course',
       'dessert',
       'appetizer'
-    ]; // Return basic categories if API fails
+    ]; 
   }
 };
 
-// Mock rating function since Spoonacular doesn't have a public rating endpoint
+
 export const addRating = async (recipeId, value) => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -164,4 +164,5 @@ export const addRating = async (recipeId, value) => {
       resolve({ success: true });
     }, 500);
   });
+
 };

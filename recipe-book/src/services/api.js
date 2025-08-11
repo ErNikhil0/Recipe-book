@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY;
+const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY || process.env.REACT_APP_SPOONACULAR_API_KEY;
 const BASE_URL = 'https://api.spoonacular.com/recipes';
 
 const api = axios.create({
@@ -166,3 +166,4 @@ export const addRating = async (recipeId, value) => {
   });
 
 };
+

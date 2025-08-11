@@ -85,7 +85,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      {/* Professional full-screen background with overlay */}
+      
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 to-gray-800/90"></div>
         <img 
@@ -97,7 +97,7 @@ const Home = () => {
 
       <div className="container mx-auto px-4 py-12 relative">
         <div className="max-w-7xl mx-auto">
-          {/* Hero section with improved typography */}
+          {/* Hero section  */}
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6 font-serif tracking-tight">
               Culinary <span className="text-amber-400">Explorer</span>
@@ -106,7 +106,7 @@ const Home = () => {
               Discover, create, and share exceptional recipes from around the world
             </p>
             
-            {/* Enhanced search form */}
+       
             <form onSubmit={handleSearch} className="max-w-3xl mx-auto">
               <div className="relative flex items-center mb-8">
                 <input
@@ -133,7 +133,6 @@ const Home = () => {
                 </button>
               </div>
 
-              {/* Improved category filter */}
               <CategoryFilter
                 categories={categories}
                 selectedCategories={selectedCategories}
@@ -142,7 +141,7 @@ const Home = () => {
             </form>
           </div>
 
-          {/* Results section with better loading states */}
+         
           <div className="relative">
             {loading ? (
               <div className="flex justify-center items-center min-h-[400px]">
@@ -196,5 +195,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;

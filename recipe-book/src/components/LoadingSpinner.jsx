@@ -12,4 +12,6 @@ const LoadingSpinner = ({ size = 'medium' }) => {
       ></div>
     </div>
   );
+
 };
+export default LoadingSpinner;

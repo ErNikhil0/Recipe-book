@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const RecipeCard = ({ recipe, className = '' }) => {
   return (
     <div className={`bg-white rounded-xl overflow-hidden shadow-lg ${className}`}>
@@ -22,10 +24,14 @@ const RecipeCard = ({ recipe, className = '' }) => {
         <p className="text-gray-600 text-sm line-clamp-3 mb-4">
           {recipe.summary?.replace(/<[^>]*>?/gm, '') || 'No description available.'}
         </p>
-        <button className="w-full py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition-colors">
+        <Link
+          to={`/recipe/${recipe.id}`}
+          className="block w-full py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition-colors text-center"
+        >
           View Recipe
-        </button>
+        </Link>
       </div>
     </div>
   );
 };
+export default RecipeCard;
